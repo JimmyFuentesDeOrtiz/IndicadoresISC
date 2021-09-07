@@ -1,0 +1,50 @@
+.investigacion{
+    background-color: #f1f1f1;
+    padding-bottom: 150px;
+}
+
+.investigacion h1{
+    font-size: 25px;
+    font-weight: 200;
+    padding-top: 150px;
+    font-size: 30px;
+    color: #38A5B4;
+
+}
+.investigacion h1 strong {
+    font-weight: 800;
+}
+.investigacion .container #titulo{
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    
+}
+
+.investigacion .container #titulo h6{
+    padding: 20px;
+    color: #38A5B4;
+    font-size: 1.3em;
+}
+.investigacion .container .cont-table{
+    background-color: #fff;
+}
+
+.investigacion .cont-invest{
+    padding: 50px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 601px) {
+    .investigacion .cont-invest tr, td{
+        font-size: 16px;
+    }
+  }
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 600px) {
+    .investigacion .cont-invest tr, td {
+      font-size: 12px;
+    }
+  }

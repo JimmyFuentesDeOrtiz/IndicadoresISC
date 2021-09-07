@@ -1,0 +1,118 @@
+.complementaria {
+    background-image: linear-gradient(to top, #a5b1ac 0%, #e6e6e6 100%);
+}
+
+@keyframes cambiar {
+    0% {
+        margin-top: 700px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+.complementaria .site-section {
+    padding-bottom: 5em;
+}
+
+.complementaria .section-heading {
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 10;
+}
+
+.complementaria .section-heading h2 {
+    padding-top: 100px;
+    position: relative;
+    font-weight: 200;
+    font-size: 30px;
+    color: #696969;
+}
+
+.complementaria .section-heading h2 strong {
+    font-weight: 800;
+}
+
+.complementaria .section-heading.text-center h2:before {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.complementaria .resume-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 4px solid transparent;
+    border-radius: 7px;
+    -moz-transition: 0.2s;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.complementaria .resume-item .col-md-7 {
+    vertical-align: middle;
+    text-align: left !important;
+}
+
+.complementaria .resume-item li {
+    text-align: left;
+    color: #555555;
+    font-size: 14px;
+}
+
+.complementaria .resume-item button {
+    border-radius: 50px !important;
+    background: #3ecca9 ;
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+}
+
+.complementaria .resume-item button:hover {
+    color: #ffffff !important;
+}
+
+.complementaria .resume-item button:focus {
+    outline: none;
+}
+
+.complementaria .resume-item a:hover {
+    color: #ffffff !important;
+}
+
+.complementaria .resume-item h3 {
+    color: #555555;
+    font-size: 20px;
+}
+
+.complementaria .resume-item .col-md-7 h4 {
+    color: #555555;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+.complementaria .resume-item .col-md-7 p {
+    font-size: 14px;
+    color: #7a7a7a;
+}
+
+.complementaria .resume-item *:last-child {
+    margin-bottom: 0;
+}
+
+.complementaria .resume-item .col-md-5>img {
+    height: 200px;
+}
+
+@media screen and (min-width: 360px) {
+    .complementaria .resume-item .col-md-5>img {
+        height: 150px;
+    }
+    .complementaria .resume-item .col-md-7 h4, p {
+        text-align: center;
+        padding: 10px;
+    }
+}

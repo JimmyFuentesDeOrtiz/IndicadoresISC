@@ -1,0 +1,174 @@
+/*seccion  de inicio*/
+
+.inicio {
+    padding-top: 90px;
+    min-height: 700px;
+    background-color: #dadada;
+}
+
+.inicio .logo-isic {
+    min-width: 120px;
+    max-width: 170px;
+}
+
+.inicio h2 {
+    padding-bottom: 20px;
+    font-size: 2.2em;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #555555;
+}
+
+.inicio .container .titulo h6 {
+    color: #505050;
+    font-size: 1.3em;
+}
+
+.inicio .container .titulo {
+    background-color: #ffffff;
+    border-bottom: 1px solid #cccccc;
+    padding: 20px;
+    vertical-align: middle;
+}
+
+.inicio .resume-item {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #cfcfcf;
+    border-radius: 7px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.inicio .resume-item button {
+    border-radius: 50px !important;
+}
+
+.inicio .resume-item button:focus {
+    outline: none;
+}
+
+.inicio .resume-item h3 {
+    color: #2f90ff;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.inicio .resume-item *:last-child {
+    margin-bottom: 0;
+}
+
+.inicio .resume-item img {
+    min-width: 100px;
+    max-width: 100px;
+    border-radius: 10px;
+}
+
+.inicio .icono {
+    height: 200px;
+    padding-bottom: 20px;
+}
+
+.inicio .logo-w {
+    height: 50px;
+    padding-bottom: 10px;
+}
+
+.inicio .resume-item a {
+    color: #5e5e5e !important;
+}
+
+.inicio .resume-item a:hover {
+    text-decoration: none;
+    color: #858585;
+}
+
+.inicio .resume-item p {
+    color: #5e5e5e;
+}
+
+.inicio .navegador {
+    width: 100%;
+}
+
+.inicio table .barra {
+    width: 250px;
+}
+
+.inicio table td {
+    padding-right: 10px;
+    text-align: left;
+    color: #494949;
+    font-size: 14px;
+}
+
+.inicio .fila {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.inicio .fila .colum {
+    padding: 5px 5px;
+    flex: auto;
+}
+
+.inicio b.Chrome {
+    color: #c5d157 !important;
+    font-size: 16px;
+}
+
+.inicio b.Firefox {
+    color: #ec7956 !important;
+    font-size: 16px;
+}
+
+.inicio b.Opera {
+    color: #ed0505 !important;
+    font-size: 16px;
+}
+
+.inicio b.Edge {
+    color: #59b9d6 !important;
+    font-size: 16px;
+}
+
+.inicio b.Explorer {
+    color: #76bdff !important;
+    font-size: 16px;
+}
+
+.inicio b.Safari {
+    color: #268ab8 !important;
+    font-size: 16px;
+}
+
+.inicio td b.Otros {
+    color: #999999 !important;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 800px) {
+    .inicio tr, td {
+        font-size: 11px;
+    }
+    .inicio table .barra {
+        width: 250px;
+    }
+}
+
+/*fin seccion 'inicio'*/
+
+.inicio #myProgress {
+    width: 100%;
+    background-color: #ddd;
+}
+
+.inicio #myBar1, #myBar2, #myBar3, #myBar4, #myBar5, #myBar6, #myBar7 {
+    width: 10%;
+    height: 15px;
+    background-color: #4c5753;
+    text-align: center;
+    line-height: 15px;
+    color: white;
+}

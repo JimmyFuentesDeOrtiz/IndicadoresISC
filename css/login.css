@@ -1,0 +1,130 @@
+.login{
+    background:#f1f1f1;
+}
+.login .main-section{
+    margin:0 auto;
+    margin-top:25%;
+    margin-bottom: 30%;
+    padding: 0;
+}
+
+.login .modal-content{
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.05);
+    opacity: .95;
+    padding: 0 45px;
+}
+.login .modal-content h1{
+    color: #ccc;
+    font-size: 2.0em;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.login .user-img{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login .user-img img{
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.login .form-group input{
+    background: #D8D8D8;
+    height: 45px;
+    font-size: 18px;
+    border:0;
+    padding-left: 54px;
+    border-radius: 25px;
+}
+.login .form-group input:enabled{
+    background: #D8D8D8;
+    color:rgb(133, 133, 133);
+}
+
+.login .form-group::before{
+    color:grey;
+    position: absolute;
+    left: 28px;
+    font-size: 25px;
+    padding-top:5px;
+}
+
+.login .forgot{
+    padding: 10px 0;
+}
+
+.login .forgot a{
+    color: white;
+}
+.login form .btn{
+    border-radius: 50px;
+    font-size: 14px;
+    padding:7px 13px;
+    min-width: 80px;
+    margin-bottom: 20px;
+}
+/*inicio css redes sociales*/
+.login .modal-content .col-12 .sidebar_fb{
+    color: #BDBDBD;
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+    transition: 0.5s;
+    transition-property: color;
+}
+
+.login .modal-content .col-12 .sidebar_fb:hover{
+    color: #0D79BB;
+}
+.login .modal-content .col-12 .sidebar_tw{
+    color: #BDBDBD;
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+    transition: 0.5s;
+    transition-property: color;
+}
+
+.login .modal-content .col-12 .sidebar_tw:hover{
+    color: #19B3D3;
+}
+.login .modal-content .col-12 .itsoeh-site{
+    color: #BDBDBD;
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+    transition: 0.5s;
+    transition-property: color;
+}
+
+.login .modal-content .col-12 .itsoeh-site:hover{
+    color: #0DBB64;
+}
+/*fin css redes sociales*/
+.login .main-section .logo .logo-itsoeh{
+    width: 140px;
+    height: 95px;
+    cursor: pointer;
+    margin-top: -100px;
+    margin-bottom: 30px;
+}
+
+.login ul.tabs li a .tab-text{
+    margin-left: 5px;
+}
+
+.login #back{
+    padding-top: 10px;
+    color: #f1f1f1;
+}
+
+.login #back:hover{
+    color: grey;
+}
+
+

@@ -1,0 +1,273 @@
+:root {
+    --level-1: #00c0b6;
+    --level-2: #03afaf;
+    --level-3: #108181;
+    --level-4: #02598b;
+    --black: black;
+}
+
+.organigrama ol { 
+    list-style: none;
+}
+
+.organigrama {
+    margin: 50px 0 100px;
+    text-align: center;
+}
+
+.organigrama .container {
+    max-width: 1000px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.organigrama .rectangle {
+    border-radius: 10px;
+    position: relative;
+    text-align: left;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* LEVEL-1 STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.organigrama .level-1 {
+    width: 50%;
+    margin: 0 auto 40px;
+    background: var(--level-1);
+    color:#ffffff;
+}
+
+.organigrama .level-1::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: var(--black);
+}
+
+/* LEVEL-2 STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.organigrama .level-2-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.organigrama .level-2-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background: var(--black);
+}
+
+.organigrama .level-2-wrapper::after {
+    display: none;
+    content: "";
+    position: absolute;
+    left: -20px;
+    bottom: -20px;
+    width: calc(100% + 20px);
+    height: 2px;
+    background: var(--black);
+}
+
+.organigrama .level-2-wrapper li {
+    position: relative;
+}
+
+.organigrama .level-2-wrapper>li::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: var(--black);
+}
+
+.organigrama .level-2 {
+    width: 70%;
+    margin: 0 auto 40px;
+    background: var(--level-2);
+    color:#f0f0f0;
+}
+
+.organigrama .level-2::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: var(--black);
+}
+
+.organigrama .level-2::after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-100%, -50%);
+    width: 20px;
+    height: 2px;
+    background: var(--black);
+}
+
+/* LEVEL-3 STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.organigrama .level-3-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.organigrama .level-3-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: calc(25% - 5px);
+    width: calc(50% + 10px);
+    height: 2px;
+    background: var(--black);
+}
+
+.organigrama .level-3-wrapper>li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 2px;
+    height: 20px;
+    background: var(--black);
+}
+
+.organigrama .level-3 {
+    margin-bottom: 20px;
+    background: var(--level-3);
+    color:#ebebeb;
+}
+
+/* LEVEL-4 STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.organigrama .level-4-wrapper {
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+}
+
+.organigrama .level-4-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 2px;
+    height: calc(100% + 20px);
+    background: var(--black);
+}
+
+.organigrama .level-4-wrapper li+li {
+    margin-top: 20px;
+}
+
+.organigrama .level-4 {
+    font-weight: normal;
+    background: var(--level-4);
+    color:#dadada;
+}
+
+.organigrama .level-4::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-100%, -50%);
+    width: 20px;
+    height: 2px;
+    background: var(--black);
+}
+
+/* MQ STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 700px) {
+    .organigrama .rectangle {
+        padding: 20px 10px;
+    }
+    .organigrama .level-1, .level-2 {
+        width: 100%;
+    }
+    .organigrama .level-1 {
+        margin-bottom: 20px;
+    }
+    .organigrama .level-1::before, .level-2-wrapper>li::before {
+        display: none;
+    }
+    .organigrama .level-2-wrapper, .level-2-wrapper::after, .level-2::after {
+        display: block;
+    }
+    .organigrama .level-2-wrapper {
+        width: 90%;
+        margin-left: 10%;
+    }
+    .organigrama .level-2-wrapper::before {
+        left: -20px;
+        width: 2px;
+        height: calc(100% + 40px);
+    }
+    .organigrama .level-2-wrapper>li:not(:first-child) {
+        margin-top: 50px;
+    }
+}
+
+.organigrama p{
+    text-align: left;
+}
+
+.organigrama .nivel-1{
+    max-width: 90px;
+    min-width: 45px;
+    border-radius: 50%;
+}
+.organigrama .nivel-2{
+    max-width: 80px;
+    min-width: 40px; 
+    border-radius: 50%;  
+}
+.organigrama .modal-content{
+    background-color: #ffffff;
+}
+.organigrama .modal-content table{
+    text-align: left;
+    font-size: 14px;
+    color:#555555;
+}
+.organigrama h6 a{
+    color: #c2c2c2;
+}
+.organigrama h6 a:hover{
+    color: #ffffff;
+    cursor: pointer;
+}
+@media (max-width: 360px) {
+    .organigrama .rectangle, p{
+        text-align: center !important;
+    }
+}

@@ -1,0 +1,85 @@
+.admon {
+    background-color:#dadada;
+    padding-bottom: 150px;
+}
+.admon a{
+    text-decoration: none;
+}
+.admon h2 {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    font-size: 2.2em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #555555;
+}
+ 
+.admon .container #titulo {
+    background-color: #ffffff;
+    border-bottom: 1px solid #cccccc;
+    padding: 20px;
+    vertical-align: middle;
+}
+
+.admon .container #titulo h6 {
+    color: #505050;
+    font-size: 1.3em;
+}
+
+.admon button.btn-light, .btn-group-sm{
+    float:right;
+}
+.admon .sec-buscador{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.admon .sec-buscador .columna{
+    padding: 10px 5px;
+    flex: auto;
+}
+.admon .sec-buscador .form-control{
+    background-color: #f0f0f0 !important;
+    font-size: 16px;
+    border: none;
+    padding: 0 15px;
+    border-radius: 50px;
+}
+.admon table.solicitud-n td{
+    color: #0091ca;
+}
+.admon table.solicitud-v td{
+    color: #67bcdd;
+}
+@media screen and (min-width: 801px) {
+    .admon .cont-invest tr, td {
+        font-size: 16px;
+    }
+    .admon button.btn-light{
+        font-size: 16px;
+    }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+
+@media screen and (max-width: 800px) {
+    .admon tr, td {
+        font-size: 11px;
+    } 
+    .admon button.btn-light, .btn-group-sm{
+        padding: 10px 0;
+        float:none;
+    }
+    .admon button.btn-light{
+        font-size: 0px;
+    }
+    .admon button.btn-light i.bi{
+        font-size: 11px;
+    }
+    .admon .sec-buscador{
+        float: none;
+    }
+    .admon .sec-buscador .columna{
+        padding: 0px;
+    }
+}

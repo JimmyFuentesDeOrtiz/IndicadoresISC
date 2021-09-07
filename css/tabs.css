@@ -1,0 +1,67 @@
+/* Style tab links 
+.tablink {
+  background-color: #f1f1f1;
+  color: #32b4ff;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #525252;
+}
+*/
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  /*border: 1px solid #ccc;*/
+  border: none;
+  background-color: #dadada;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  color: #7e7e7e;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+ 
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ebebeb;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ffffff;
+  color:#1d1d1d;
+}
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  background-color: #ffffff;
+  display: none;
+  padding: 40px 12px;
+  border: none;
+}
+/*#tab1, #tab2, #tab3, #tab4 {background-color: rgb(255, 255, 255);}*/
+
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 600px) {
+    .tab button {
+      font-size: 0px;
+    }
+    .tab button i.bi{
+      font-size: 17px !important;
+    }
+  }
