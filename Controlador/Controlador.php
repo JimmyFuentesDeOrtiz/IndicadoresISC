@@ -48,6 +48,7 @@ function getNivelParcial($op, $per, $anio, $par) {
     $stmt->execute();
     $stmt->bind_result($claveGrupo, $asignatura, $eje, $docente, $sumCalif, $promedio, $totalEstEval, $totalGroup, $aprobadosXParcial, $porcentajeAprob, $reprobadosXParcial, $porcentajeReprob, $aprobadosU1, $reprobadosU1, $aprobadosU2, $reprobadosU2);
     $i = 0;
+    $nvlPar [0][0]=0;
     while ($stmt->fetch()) {
         $nvlPar[$i][0] = $claveGrupo;
         $nvlPar[$i][1] = $asignatura;
@@ -115,6 +116,7 @@ function getInfoAreas($per, $anio, $par) {
     $stmt->execute();
     $stmt->bind_result($Nombre, $estEval, $aprobados, $porArob, $reprobados, $porRerob);
     $i = 0;
+    $infoAr [0][0]=0;
     while ($stmt->fetch()) {
         $infoAr[$i][0] = $Nombre;
         $infoAr[$i][1] = $estEval;
@@ -174,6 +176,7 @@ function getInfoFinal($per, $anio) {
     $stmt->execute();
     $stmt->bind_result($matricula, $matriculaEval, $aprobTotal, $porcentajeAprob, $reprobados, $porcentajeReprob);
     $i = 0;
+    $infoFin[0] = 0;
     while ($stmt->fetch()) {
         $infoFin[0] = $matricula;
         $infoFin[1] = $matriculaEval;

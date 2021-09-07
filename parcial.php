@@ -9,10 +9,12 @@ if (sizeof($datos) == 2) {
     $op = $datos[3];
     $unPeri = $datos;
 }
-$nvlPar = getNivelParcial($op, $unPeri[0], $unPeri[1], $unPeri[2]);
-$infoParcial = getInfoParcial($unPeri[0], $unPeri[1], $unPeri[2]);
-$noPar = getNumParcialSem($unPeri[0], $unPeri[1]);
-$infoAreas = getInfoAreas($unPeri[0], $unPeri[1], $unPeri[2])
+if (is_array($unPeri)) {
+    $nvlPar = getNivelParcial($op, $unPeri[0], $unPeri[1], $unPeri[2]);
+    $infoParcial = getInfoParcial($unPeri[0], $unPeri[1], $unPeri[2]);
+    $noPar = getNumParcialSem($unPeri[0], $unPeri[1]);
+    $infoAreas = getInfoAreas($unPeri[0], $unPeri[1], $unPeri[2]);
+}
 ?>
 <div class="especialidad">
     <div class="contenedor-texto topmargin-xs">
@@ -381,35 +383,38 @@ $infoAreas = getInfoAreas($unPeri[0], $unPeri[1], $unPeri[2])
             $sumatot = 0;
             $promtot = 0;
             $estuEvaltot = 0;
-            for ($i = 0; $i < sizeof($nvlPar); $i++) {
-                echo '<tr>';
-                for ($j = 0; $j < sizeof($nvlPar[$i]); $j++) {
-                    echo'<td style="border: 1px solid rgba(0, 0, 0);">
+            if (is_array($nvlPar) && (sizeof($nvlPar[0])>1)) {
+                for ($i = 0; $i < sizeof($nvlPar); $i++) {
+                    echo '<tr>';
+                    for ($j = 0; $j < sizeof($nvlPar[$i]); $j++) {
+                        echo'<td style="border: 1px solid rgba(0, 0, 0);">
                                 <div class="mb-1 semestres text-center" >
                                     <p style="' . (($nvlPar[$i][13] != '') ? 'color:#ff0000' : 'color:#5f5f5f') . ' !important;"><b>' . $nvlPar[$i][$j] . (($j == 9 || $j == 11) ? '%' : '') . '</b></p>
                                 </div>
                             </td>';
-                    switch ($j) {
-                        case 4:
-                            $sumatot += $nvlPar[$i][$j];
-                            break;
-                        case 5:
-                            $promtot += $nvlPar[$i][$j];
-                            break;
-                        case 6:
-                            $estuEvaltot += $nvlPar[$i][$j];
-                            break;
+                        switch ($j) {
+                            case 4:
+                                $sumatot += $nvlPar[$i][$j];
+                                break;
+                            case 5:
+                                $promtot += $nvlPar[$i][$j];
+                                break;
+                            case 6:
+                                $estuEvaltot += $nvlPar[$i][$j];
+                                break;
+                        }
                     }
+                    echo '</tr>';
                 }
-                echo '</tr>';
             }
+
             echo '<tr>';
             for ($i = 0; $i < 4; $i++) {
                 echo'<td></td>';
             }
             echo '
                         <td style="background: rgba(160, 160, 160); border: 1px solid rgba(0, 0, 0);"><b>' . $sumatot . '</b></td>
-                        <td style="background: rgba(160, 160, 160); border: 1px solid rgba(0, 0, 0);"><b>' . bcdiv($promtot / sizeof($nvlPar), 1, 2) . '</b></td>
+                        <td style="background: rgba(160, 160, 160); border: 1px solid rgba(0, 0, 0);"><b>' . bcdiv($promtot / (is_array($nvlPar) ? sizeof($nvlPar) : 1), 1, 2) . '</b></td>
                         <td style="background: rgba(160, 160, 160); border: 1px solid rgba(0, 0, 0);"><b>' . $estuEvaltot . '</b></td>
                     </tr>
                     </table>    
